@@ -1,7 +1,7 @@
-baseURL = "https://example.com"
-languageCode = "en-us"
+baseURL = "/"
+languageCode = "en"
 title = "Hugo Serif Theme"
-themesDir = "../.."
+themesDir = "themes"
 theme = "hugo-serif-theme"
 
 [module]
@@ -47,7 +47,12 @@ theme = "hugo-serif-theme"
     summary_large_truncate = 120  # How many characters to include in the summary of the team bios (large layout) before truncating
 
   [params.footer]
-    copyright_text = 'Free Hugo theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
+    copyright_text = 'All rights reseved for &#169 SarafConsulting LTD. 2022'
+
+[permalinks]
+  posts = "/posts/:title"
+  
+paginate = 3
 
 [menu]
   # Main Menu
@@ -70,6 +75,10 @@ theme = "hugo-serif-theme"
       name = "Contact"
       url = "/contact/"
       weight = 4
+[[menu.main]]
+      name = "Blog"
+      url = "/posts/"
+      weight = 5
 
   # Footer Menu
   [[menu.footer]]
