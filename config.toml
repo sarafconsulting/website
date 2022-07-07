@@ -17,6 +17,8 @@ theme = "hugo-serif-theme"
   [params.homepage]
     show_contact_box = true # show / hide the contaxt box on the homepage
     show_services_button = true  # show / hide the "view all services" button
+    show_services_on_homepage = false
+    show_about_us = true
 
   [params.logo]
     mobile = "images/logo/logo-mobile.svg"
@@ -32,11 +34,11 @@ theme = "hugo-serif-theme"
     base = "Source Sans Pro"
 
   [params.colors]
-    primary = "#f24088"
+    primary = "#936F5A"
     black = "#2f2f41"
-    white = "#ffffff"
+    white = "#EADFD5"
     white_offset = "#f6f7ff"
-    grey = "#5C5A5A"
+    grey = "#914934"
 
   [params.seo]
     meta_twitter_site = "@zerostaticio"

@@ -1,3 +1,12 @@
+#blog-head {
+  margin: 10 auto;
+  padding: 0 72x;
+}
+
+#blog-head .title {
+  font-size: 48px;
+}
+
 #taxon {
   max-width: 580px;
   margin: 0 auto;
@@ -150,7 +159,7 @@
   text-align: right;
   position: relative;
   top: 1px;
-  color: #bbb;
+  color: ligten($black, 30%);
 }
 
 #list-page .summary {
