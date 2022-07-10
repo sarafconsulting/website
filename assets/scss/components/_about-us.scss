@@ -6,11 +6,6 @@
     padding-bottom: 60px;
     overflow: hidden;
 
-    @include media-breakpoint-up(md) {
-        padding-top: 0px;
-        padding-bottom: 140px;
-    }
-
     h1 {
         color: $black;
         font-size: 42px;
@@ -31,7 +26,7 @@
         font-size: 1.2rem;
         font-weight: light;
         line-height: 1.5;
-        color: $grey;
+        color: $black;
 
         @include media-breakpoint-up(md) {
             width: 150%;

@@ -1,5 +1,4 @@
 {{ define "body_classes" }}page-home{{ end }}
-
 {{ define "main" }}
 <div class="intro">
     <div class="container">
@@ -19,20 +18,23 @@
 </div>
 
 {{if .Site.Params.homepage.show_about_us }}
-<div class="about-us">
-    <div class="container">
-        <div class="row justify-content-start">
-            <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-                <h1>About us</h1>
-                {{with site.GetPage "about"}}
-                {{.Content}}
-                {{end}}
+<div class="strip">
+    <div id="about">
+        <div class="about-us">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                        <h1>About us</h1>
+                        {{with site.GetPage "about"}}
+                        {{.Content}}
+                        {{end}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 {{end}}
-
 
 {{if .Site.Params.homepage.show_services_on_homepage}}
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
@@ -58,35 +60,50 @@
 </div>
 {{end}}
 {{end}}
+<!-- Team -->
+
+<!-- Consulting -->
 {{if .Site.Data.features}}
-<div class="strip strip-grey">
-    <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-        <div class="row justify-content-center">
-            {{ range .Site.Data.features }}
-            <div class="col-12 col-md-6 col-lg-4 mb-2">
-                <div class="feature">
-                    {{ if .image }}
-                    <div class="feature-image"><img width="100" height="100" alt="{{ .Title }} logo"
-                            src="{{ .image | relURL }}" /></div>
-                    {{ end }}
-                    <h2 class="feature-title">{{ .title }}</h2>
-                    <div class="feature-content">
-                        <p>{{ .description }}</p>
+<div id="consulting">
+
+    <!-- <div class="strip strip-grey"> -->
+        <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+
+            <div class="subtitle">
+                <h1>Consulting</h1>
+            </div>
+
+            <div class="row justify-content-center">
+                {{ range .Site.Data.features }}
+                <div class="col-12 col-md-6 col-lg-4 mb-2">
+                    <div class="feature">
+                        {{ if .image }}
+                        <div class="feature-image"><img width="100" height="100" alt="{{ .Title }} logo"
+                                src="{{ .image | relURL }}" /></div>
+                        {{ end }}
+                        <h2 class="feature-title">{{ .title }}</h2>
+                        <div class="feature-content">
+                            <p>{{ .description }}</p>
+                        </div>
                     </div>
                 </div>
+                {{end}}
             </div>
-            {{end}}
         </div>
-    </div>
+    <!-- </div> -->
 </div>
 {{end}}
 {{ if .Site.Params.homepage.show_contact_box }}
-<div class="intro">
-    <div class="container">
-        <div class="row justify-content-start">
-            <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-                <h1>Contact Us</h1>
-                {{ partial "call.html" (dict "site" .Site "context" . "show_button" "true") }}
+<div class="strip">
+    <div id="contacts">
+        <div class="intro">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                        <h1>Contact Us</h1>
+                        {{ partial "call.html" (dict "site" .Site "context" . "show_button" "true") }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
