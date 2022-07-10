@@ -3,6 +3,7 @@ languageCode = "en"
 title = "Saraf Consulting"
 themesDir = "themes"
 theme = "hugo-serif-theme"
+publishDir="docs/"
 
 [module]
   [module.hugoVersion]
